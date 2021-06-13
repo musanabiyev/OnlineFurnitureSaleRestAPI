@@ -19,9 +19,7 @@ public class ProductRestController {
 
     @GetMapping("/products")
     public ResponseEntity<ResponseDTO> getUsers(
-            @RequestParam(name = "name", required = false) String name,
-            @RequestParam(name = "description", required = false) String description
-    ) {
+            @RequestParam(name = "name", required = false) String name) {
 
         List<Product> pr = proService.getAll(name);
 
