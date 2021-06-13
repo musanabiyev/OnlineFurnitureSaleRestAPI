@@ -18,7 +18,7 @@ public class ProductRestController {
     private ProductServiceInter proService;
 
     @GetMapping("/products")
-    public ResponseEntity<ResponseDTO> getUsers(
+    public ResponseEntity<ResponseDTO> getProducts(
             @RequestParam(name = "name", required = false) String name) {
 
         List<Product> pr = proService.getAll(name);
